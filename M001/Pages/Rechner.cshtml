@@ -1,0 +1,22 @@
+﻿@page "/Rechner"
+@model M001.Pages.RechnerModel
+
+<form method="post">
+	Anzahl Zahlen: <input type="number" name="anzahl"/>
+	<br/>
+	<button type="submit">Speichern</button>
+</form>
+
+<form method="post" asp-page-handler="Berechnen">
+	<select asp-items="Html.GetEnumSelectList<Rechenoperation>().Skip(1)" name="op">
+		<option value="Keine">Rechenart auswählen: </option>
+	</select>
+	<br />
+	@for (int i = 1; i <= Model.AnzahlZahlen; i++)
+	{
+		<span>Zahl @i:</span>
+		<input type="number" name="zahlen" />
+		<br />
+	}
+	<button type="submit">Berechnen</button>
+</form>
