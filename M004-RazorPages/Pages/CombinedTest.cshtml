@@ -1,0 +1,18 @@
+﻿@page "/Test"
+@inject List<User> users
+
+<p>Test</p>
+@if (FoundUser != null)
+{
+	<p>@FoundUser.Username</p>
+}
+
+@functions
+{
+	User? FoundUser;
+
+	void OnGet(string Username)
+	{
+		FoundUser = users.FirstOrDefault(e => e.Username == Username);
+	}
+}

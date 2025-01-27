@@ -1,0 +1,15 @@
+﻿@page "/Login/Registrieren"
+@model M004_RazorPages.Pages.RegistrierenModel
+<h3>Registrieren</h3>
+
+<form asp-page-handler="RegistrierenButton">
+	@*Über name wird der Input des Users an die Action im Backend weitergegeben*@
+	Username: <input type="text" name="Username" />
+	<br />
+
+	Passwort: <input type="text" name="Password" />
+	<br />
+
+	@*Wenn der User den Button drückt (die Form submitted), wird die Action aus dem <form> Tag ausgeführt*@
+	<button type="submit">Registrieren</button>
+</form>

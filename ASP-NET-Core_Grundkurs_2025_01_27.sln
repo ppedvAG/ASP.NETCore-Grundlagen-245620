@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M002-Einführung", "M002-Ei
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M003-MVC", "M003-MVC\M003-MVC.csproj", "{EDF49945-9A1D-4ABA-A9BC-AAAE18C5309C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M004-RazorPages", "M004-RazorPages\M004-RazorPages.csproj", "{5390AF17-E701-4BAB-B943-83B3FC5A3127}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EDF49945-9A1D-4ABA-A9BC-AAAE18C5309C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDF49945-9A1D-4ABA-A9BC-AAAE18C5309C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDF49945-9A1D-4ABA-A9BC-AAAE18C5309C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5390AF17-E701-4BAB-B943-83B3FC5A3127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5390AF17-E701-4BAB-B943-83B3FC5A3127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5390AF17-E701-4BAB-B943-83B3FC5A3127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5390AF17-E701-4BAB-B943-83B3FC5A3127}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

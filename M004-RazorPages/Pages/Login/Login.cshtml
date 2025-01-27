@@ -1,0 +1,13 @@
+﻿@page "/Login/Index"
+@model M004_RazorPages.Pages.LoginModel
+
+@if (Model.FoundUser != null)
+{
+	<p>Hallo @Model.FoundUser.Username</p>
+}
+
+@*asp-page: Äquivalent zu asp-action*@
+@*Funktioniert auch Dateiübergreifend*@
+<a asp-page="Einloggen">Login</a>
+<br />
+<a asp-page="Registrieren">Registrieren</a>

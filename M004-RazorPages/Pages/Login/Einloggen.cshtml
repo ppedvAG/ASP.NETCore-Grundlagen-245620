@@ -1,0 +1,17 @@
+﻿@page "/Login/Einloggen"
+@model M004_RazorPages.Pages.EinloggenModel
+<h3>Einloggen</h3>
+
+@*asp-page-handler: Definiert, den Namen der Methode, welche ausgeführt werden soll*@
+@*Die Methode muss in der Form: OnGet<Name>/OnPost<Name> definiert werden*@
+<form asp-page-handler="LoginButton">
+	@*Über name wird der Input des Users an die Action im Backend weitergegeben*@
+	Username: <input type="text" name="Username" />
+	<br />
+
+	Passwort: <input type="text" name="Password" />
+	<br />
+
+	@*Wenn der User den Button drückt (die Form submitted), wird die Action aus dem <form> Tag ausgeführt*@
+	<button type="submit">Login</button>
+</form>
