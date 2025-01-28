@@ -15,8 +15,9 @@ namespace M000_DataAccess.Models;
 public partial class Customer
 {
     [Key]
+	[Required]
     [Column("CustomerID")]
-    [StringLength(5)]
+    [StringLength(5, MinimumLength = 5, ErrorMessage = "Die CustomerID muss genau 5 Zeichen lang sein!")]
     public string CustomerId { get; set; }
 
     [Required]

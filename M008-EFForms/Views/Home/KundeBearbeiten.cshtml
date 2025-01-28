@@ -1,0 +1,44 @@
+﻿@using M000_DataAccess.Models
+@model Customer
+@{
+	ViewData["Title"] = $"Kunde bearbeiten - {Model.CustomerId}";
+}
+
+<form asp-action="Speichern">
+	<ul>
+		<li>
+			@*asp-for: Verbindet Model mit HTML, d.h. hier werden die Werte vom Model von Anfang an eingesetzt*@
+			@*Wenn auf der Page der Wert geändert wird, wird dieser auch hier im Model aktualisiert*@
+			CustomerId: <input type="text" asp-for="@Model.CustomerId"/>
+
+			@*asp-validation-for: Validiert ein Feld*@
+			@*Wird in einem span gespeichert, dieses ist standardmäßig nicht sichtbar*@
+			@*Validierung wird über DataAnnotations durchgeführt*@
+			<span asp-validation-for="@Model.CustomerId"/>
+		</li>
+		<li>
+			ContactName: <input type="text" asp-for="@Model.ContactName" />
+			<span asp-validation-for="@Model.ContactName" />
+		</li>
+		<li>
+			CompanyName: <input type="text" asp-for="@Model.CompanyName" />
+			<span asp-validation-for="@Model.CompanyName" />
+		</li>
+		<li>
+			Phone: <input type="text" asp-for="@Model.Phone" />
+			<span asp-validation-for="@Model.Phone"/>
+		</li>
+	</ul>
+	<div asp-validation-summary="All">
+
+	</div>
+	<button type="submit">Speichern</button>
+</form>
+
+@*Section: Unterteilung des HTML-Codes in Teile*@
+@section Scripts {
+	@{
+		@*RenderPartialAsync: Bindet eine View in eine andere View ein*@
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

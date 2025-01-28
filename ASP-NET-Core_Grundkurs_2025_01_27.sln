@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M007-EFListen", "M007-EFLis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M000-DataAccess", "M000-DataAccess\M000-DataAccess.csproj", "{28F362BE-2676-4818-9B05-BD25E7294193}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M008-EFForms", "M008-EFForms\M008-EFForms.csproj", "{8F3DBE4A-64E2-48FB-B2FD-7199BB5E326F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{28F362BE-2676-4818-9B05-BD25E7294193}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28F362BE-2676-4818-9B05-BD25E7294193}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28F362BE-2676-4818-9B05-BD25E7294193}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F3DBE4A-64E2-48FB-B2FD-7199BB5E326F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F3DBE4A-64E2-48FB-B2FD-7199BB5E326F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F3DBE4A-64E2-48FB-B2FD-7199BB5E326F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F3DBE4A-64E2-48FB-B2FD-7199BB5E326F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
