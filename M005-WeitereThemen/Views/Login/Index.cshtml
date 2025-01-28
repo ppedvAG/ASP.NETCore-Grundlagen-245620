@@ -1,0 +1,23 @@
+﻿@*TagHelper*@
+@*ASP spezifische Syntaxelemente, welche im HTML eingebaut werden können*@
+@*asp-action: Leitet auf eine Methode im selben Controller weiter (führt die Methode aus)*@
+@*asp-controller: Leitet auf einen anderen Controller weiter*@
+@*asp-route: Weitergeben von Parametern ins Backend (an die entsprechende Action Daten weitergeben)*@
+
+@***********************************************************************************@
+
+@*Model: Gibt Zugriff auf die Daten, welche aus dem Backend weitergegeben werden*@
+@*Hat standardmäßig den Typ dynamic*@
+@*dynamic: Wird zur Laufzeit evaluiert (keine Compilerfehler)*@
+@*Mit @model <Typ> kann der Typ definiert werden*@
+
+@*Generell sollte im Frontend für das Model in Typ definiert werden*@
+@model User //Wenn ein User per Parameter im Controller mitgegeben wurde, können wir diesen auf null prüfen
+@if (Model != null)
+{
+	<p>Hallo @Model.Username</p>
+}
+
+<a asp-action="Einloggen">Login</a>
+<br/>
+<a asp-action="Registrieren">Registrieren</a>
