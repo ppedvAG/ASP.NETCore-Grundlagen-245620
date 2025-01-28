@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M005-WeitereThemen", "M005-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M006-EntityFramework", "M006-EntityFramework\M006-EntityFramework.csproj", "{C88DDD80-C39F-440E-BC19-387BE05E234F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M007-EFListen", "M007-EFListen\M007-EFListen.csproj", "{B5BF3ACA-9703-451B-A8DC-629EA92EAD80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M000-DataAccess", "M000-DataAccess\M000-DataAccess.csproj", "{28F362BE-2676-4818-9B05-BD25E7294193}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{C88DDD80-C39F-440E-BC19-387BE05E234F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C88DDD80-C39F-440E-BC19-387BE05E234F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C88DDD80-C39F-440E-BC19-387BE05E234F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5BF3ACA-9703-451B-A8DC-629EA92EAD80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5BF3ACA-9703-451B-A8DC-629EA92EAD80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5BF3ACA-9703-451B-A8DC-629EA92EAD80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5BF3ACA-9703-451B-A8DC-629EA92EAD80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F362BE-2676-4818-9B05-BD25E7294193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F362BE-2676-4818-9B05-BD25E7294193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F362BE-2676-4818-9B05-BD25E7294193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F362BE-2676-4818-9B05-BD25E7294193}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
