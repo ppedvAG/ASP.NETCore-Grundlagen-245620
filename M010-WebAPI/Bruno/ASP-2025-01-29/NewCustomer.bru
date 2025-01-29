@@ -1,0 +1,29 @@
+meta {
+  name: NewCustomer
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://localhost:7123/api/northwind/customer/save
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "customerId": "ABCDE",
+      "companyName": "API Test Kunde",
+      "contactName": "Thomas Hardy",
+      "contactTitle": "Sales Representative",
+      "address": "120 Hanover Sq.",
+      "city": "London",
+      "region": null,
+      "postalCode": "WA1 1DP",
+      "country": "UK",
+      "phone": "(171) 555-7788",
+      "fax": "(171) 555-6750",
+      "orders": [],
+      "customerTypes": []
+  }
+}

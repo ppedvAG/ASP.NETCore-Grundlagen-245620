@@ -1,0 +1,12 @@
+﻿@page "api/northwind"
+@using M000_DataAccess.Models
+@model M010_WebAPI.Razor.TestModel
+@inject NorthwindContext db
+
+@{
+	[Route("customers/all")]
+	IEnumerable<Customer> OnGet()
+	{
+		return db.Customers;
+	}
+}

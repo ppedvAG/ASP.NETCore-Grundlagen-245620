@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Customer>
+@{
+	ViewData["Title"] = "Alle Kunden";
+	int rowCount = 0;
+}
+
+@*https://getbootstrap.com/docs/5.3/getting-started/introduction/*@
+
+<h3>Alle Kunden</h3>
+@await Html.PartialAsync("PartialTest")
+@await Component.InvokeAsync("TestComponent")
+
+<form method="post" asp-action="FilterByCountry">
+	Land: <input type="text" name="country"/>
+	<button type="submit">Filtern</button>
+</form>
+
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th class="text-center">ID</th>
+			<th class="text-center">Firmenname</th>
+			<th class="text-center">Ansprechpartner</th>
+			<th class="text-center">Adresse</th>
+			<th class="text-center">TelNr.</th>
+			<th class="text-center">Buttons</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (Customer c in Model)
+		{
+			if (ViewBag.Max < rowCount)
+			{
+				continue;
+			}
+			<tr class="@(rowCount % 2 == 0 ? "table-success" : "table-primary")">
+				<td class="text-center">@c.CustomerId</td>
+				<td class="text-center">@c.CompanyName</td>
+				<td class="text-center">@(c.ContactTitle + " " + c.ContactName)</td>
+				<td class="text-center">@($"{c.Address} {c.City} {c.PostalCode} {c.Country}")</td>
+				<td class="text-center">@c.Phone</td>
+				<td class="text-center">
+					@*asp-route-...: Verbindet außerhalb einer Form das Frontend mit dem Backend*@
+					@*asp-route-id benötigt in der Action (BestellungenAnzeigen) einen Parameter namens id*@
+					<a asp-action="BestellungenAnzeigen" asp-route-id="@c.CustomerId">
+						<button class="btn btn-outline-success btn-sm mb-1">
+							Bestellungen
+						</button>
+					</a>
+					<br/>
+					<a asp-action="KundeLoeschen" asp-route-id="@c.CustomerId">
+						<button class="btn btn-outline-danger btn-sm mb-1">
+							Löschen
+						</button>
+					</a>
+					<br />
+					<a asp-action="KundeBearbeiten" asp-route-id="@c.CustomerId">
+						<button class="btn btn-outline-warning btn-sm mb-1">
+							Bearbeiten
+						</button>
+					</a>
+				</td>
+				@(rowCount++)
+			</tr>
+		}
+	</tbody>
+</table>
